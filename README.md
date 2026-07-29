@@ -1,7 +1,6 @@
 ## The challenge
-
-Project 1400 is not simply an attempt to draw a detailed world map. Its purpose is to build a reproducible geospatial system capable of transforming a global base of more than 24 million hexagonal cells and around 72 million adjacency relationships into approximately 32,000 coherent territorial units.
 <img width="1829" height="852" alt="image" src="https://github.com/user-attachments/assets/fc3fffbb-06e4-4eb4-b346-21c79914a37b" />
+Project 1400 is not simply an attempt to draw a detailed world map. Its purpose is to build a reproducible geospatial system capable of transforming a global base of more than 24 million hexagonal cells and around 72 million adjacency relationships into approximately 32,000 coherent territorial units.
 
 The first challenge is scale. Geographic, demographic and environmental information must be processed across the entire world while keeping the pipeline efficient enough to test, compare and refine repeatedly. The system therefore has to preserve meaningful local detail without making global iteration impractical.
 
