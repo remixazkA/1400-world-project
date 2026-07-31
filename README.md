@@ -4,9 +4,9 @@
 
 ### Global territorial modelling for a historical grand-strategy simulation
 
-**24M+ hexagonal cells** · **72M+ adjacency relationships** · **~32,000 territorial units**
+**32.44M total hex cells** · **24.15M active cells** · **97.05M adjacency relationships** · **31,264 final provinces**
 
-[The challenge](#the-challenge) · [Design principles](#design-principles) · [Project documentation](#project-documentation)
+[Results gallery](docs/results-and-examples.md) · [Technical evidence](docs/technical-evidence.md) · [QA case study](docs/qa-case-study-holes.md) · [Project role](docs/project-role.md)
 
 </div>
 
@@ -14,21 +14,27 @@
   <img src="images/world-map.png" alt="Global territorial-generation prototype" width="100%" />
 </p>
 
+> **Status:** active development. The published outputs are a verified working snapshot, not a claim of final cartographic perfection.
+
+## Technical challenges solved
+
+- **Unassigned cells after regional integration** → detected connected gaps, selected repair strategies by component scale and revalidated the complete active layer → **924,750 cells patched; 0 remain unassigned**.
+- **Large gaps that could not be merged safely** → absorbed **35,491** small components, rebuilt **148** large components and created **686** provinces where a forced merge would have produced weak territorial shapes.
+- **Topological consistency across independently processed regions** → integrated **43 superregions** against the global cell and adjacency layers → **0 duplicate hex identifiers** and all **24,146,859 active cells assigned**.
+- **Weak shapes left after completeness repair** → ran four additional cleanup passes and evaluated merge candidates → **230,178 cell reassignments** and **20 province merges**.
+- **Slow and opaque global experimentation** → separated expensive global preparation from deterministic regional execution, with persisted intermediate outputs, checkpoints and region-level reruns.
+
+These are passed quality gates for the current dataset. Geographic calibration and visual refinement remain ongoing; [the evidence page](docs/technical-evidence.md) records the measurable snapshot and its limits.
+
+---
+
 ## The challenge
 
-Project 1400 is not simply an attempt to draw a detailed world map. Its purpose is to build a reproducible geospatial system capable of transforming a global base of more than 24 million hexagonal cells and around 72 million adjacency relationships into approximately 32,000 coherent territorial units.
+Project 1400 is not simply an attempt to draw a detailed world map. It is a reproducible geospatial system that transforms a global foundation of **32,437,371 hexagonal cells** and **97,045,268 adjacency relationships** into a current layer of **31,264 coherent territorial units**.
 
-**Scale.** Geographic, demographic and environmental information must be processed across the entire world while keeping the pipeline efficient enough to test, compare and refine repeatedly. The system therefore has to preserve meaningful local detail without making global iteration impractical.
+The final provinces are intended as plausible strategic spaces rather than exact political borders from 1400. Their formation is informed by elevation, slope, hydrology, coastlines, climate, vegetation, historical population and impassable terrain without allowing any one variable to dictate the map mechanically.
 
-**Territorial plausibility.** Borders should not emerge from geometry alone. Rivers, coastlines, elevation, slope, mountain barriers, historical population estimates, vegetation and climate all affect how space is divided. These variables do not always point towards the same solution, so they must be combined carefully rather than applied as rigid rules.
-
-**Procedural quality.** Procedural generation creates its own structural problems. Without explicit controls, it tends to produce elongated provinces, fragmented territories, unnatural straight borders, narrow slivers and repetitive geometric patterns. Avoiding these defects requires criteria for compactness, continuity, border quality and the treatment of isolated or awkward areas.
-
-**Global generalisation.** A method that produces convincing results in the Iberian Peninsula may fail completely in the Sahara, the Himalayas, the Amazon basin, Siberia or the Indonesian archipelago. The objective is not to handcraft each region independently, but to create a common generation pipeline that adapts to radically different geographic conditions while preserving a consistent global standard.
-
-**Validation and iteration.** Visual inspection is useful, but insufficient at this scale. Regional test cases, measurable quality criteria and repeated comparison between iterations are necessary to identify defects and determine whether a change improves the map globally rather than merely solving one local problem at the expense of another.
-
-The project is therefore as much about designing a reliable decision-making process as it is about producing the final map. Each stage must remain reproducible, inspectable and flexible enough to evolve as new constraints, datasets and validation criteria are introduced.
+The central difficulty is global generalisation. A method that works in Iberia may fail in the Sahara, the Himalayas, the Amazon basin or an archipelago. Regional tests, measurable acceptance criteria and structured visual review are therefore used to determine whether a change improves the system rather than merely fixing one local example.
 
 ---
 
@@ -47,13 +53,15 @@ The project is therefore as much about designing a reliable decision-making proc
 
 | Area | Description |
 |---|---|
+| [Results and examples](docs/results-and-examples.md) | Global visual gallery, regional commentary and projection note |
+| [Technical evidence](docs/technical-evidence.md) | Verified global metrics, coverage and post-processing results |
+| [QA case study](docs/qa-case-study-holes.md) | Detection, repair and verification of unassigned spatial holes |
 | [Overview](docs/overview.md) | Scope, objectives, constraints and success criteria |
 | [Architecture](docs/architecture.md) | Processing stages, data flow and operational structure |
 | [Design decisions](docs/design-decisions.md) | Major choices, alternatives and trade-offs |
 | [Validation](docs/validation.md) | Defect taxonomy, regional tests and regression workflow |
 | [Project role](docs/project-role.md) | Responsibilities and AI-assisted implementation model |
 | [Data sources](assets/data-sources.md) | Source categories, quality questions and provenance policy |
-| [Results and examples](docs/results-and-examples.md) | Visual outputs, regional comparisons and validation cases |
-| [Status and roadmap](docs/status-and-roadmap.md) | Current phase, established foundation and next milestones |
+| [Status and roadmap](docs/status-and-roadmap.md) | Current phase, completed evidence and next milestones |
 
 <p align="right"><a href="#project-1400">Back to top ↑</a></p>
