@@ -53,5 +53,7 @@ The project is therefore as much about designing a reliable decision-making proc
 | [Validation](docs/validation.md) | Defect taxonomy, regional tests and regression workflow |
 | [Project role](docs/project-role.md) | Responsibilities and AI-assisted implementation model |
 | [Data sources](assets/data-sources.md) | Source categories, quality questions and provenance policy |
+| [Results and examples](docs/results-and-examples.md) | Visual outputs, regional comparisons and validation cases |
+| [Status and roadmap](docs/status-and-roadmap.md) | Current phase, established foundation and next milestones |
 
 <p align="right"><a href="#project-1400">Back to top ↑</a></p>
