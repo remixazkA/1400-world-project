@@ -1,0 +1,10 @@
+flowchart LR
+    A[GIS and historical sources] --> B[Global hexagonal layer]
+    B --> C[Cell-level attributes]
+    C --> D[Adjacency and barrier graph]
+    D --> E[Regional targets and seed scoring]
+    E --> F[Constrained territorial growth]
+    F --> G[Cleanup and merging]
+    G --> H[Quantitative and visual validation]
+    H -->|revise| E
+    H -->|accept| I[Territorial output]
