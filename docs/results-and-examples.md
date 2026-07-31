@@ -1,5 +1,7 @@
 # Results and examples
 
+[← Project README](../README.md) · [Technical evidence](technical-evidence.md) · [QA case study](qa-case-study-holes.md)
+
 This gallery presents representative outputs from the current Project 1400 territorial-generation pipeline. The selection is deliberately global: it includes dense temperate regions, mountain systems, deserts, islands, archipelagos and fragmented coastlines.
 
 The images are working results rather than a claim of final cartographic perfection. They are used to evaluate territorial density, contiguity, shape, barrier behaviour, coastal treatment and consistency between very different geographic environments.
@@ -84,3 +86,7 @@ Final presentation maps can be reprojected to a more familiar geographic display
 ## Publication status
 
 These images document the current working state of the system. Regional outputs remain subject to further parameter calibration, systematic validation and visual refinement. Successful-looking examples are published alongside quantitative evidence and known limitations so that the portfolio represents the system honestly.
+
+---
+
+[← Project README](../README.md) · [Technical evidence](technical-evidence.md) · [Status and roadmap](status-and-roadmap.md)

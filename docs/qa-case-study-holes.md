@@ -1,5 +1,7 @@
 # QA case study: repairing unassigned spatial holes
 
+[← Project README](../README.md) · [Results gallery](results-and-examples.md) · [Technical evidence](technical-evidence.md)
+
 ## Problem
 
 After independently generated superregions were combined, the global integration test found active playable cells that did not belong to any province. A visually convincing map could still conceal these gaps, so completeness was evaluated directly at cell level.
@@ -51,3 +53,7 @@ It also illustrates the project owner's role: defining acceptable behaviour, ide
 ## Limitations
 
 Zero unassigned cells establishes topological completeness, not historical or geographic perfection. Individual repaired provinces still require shape, density, barrier and regional-coherence review. This case therefore documents one passed quality gate inside a wider iterative validation process.
+
+---
+
+[← Project README](../README.md) · [Validation strategy](validation.md) · [Status and roadmap](status-and-roadmap.md)

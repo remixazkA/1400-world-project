@@ -1,5 +1,7 @@
 # Technical evidence
 
+[← Project README](../README.md) · [Results gallery](results-and-examples.md) · [QA case study](qa-case-study-holes.md)
+
 This page records measurable evidence produced by the current Project 1400 pipeline. It separates the complete global spatial grid from the subset of cells that are active and playable.
 
 ## Verified global snapshot
@@ -61,3 +63,7 @@ The same stage identified 53 merge candidates and merged 20 provinces. The resul
 These figures come from pipeline-generated summaries and validation reports associated with the current working dataset. They describe a reproducible project snapshot, not an immutable final release. Values may change as inputs, masks, regional targets and cleanup rules are refined.
 
 The complete raw datasets are not included in this repository because the working environment contains hundreds of gigabytes of GeoPackage, raster, Parquet and SQLite data. The repository publishes compact evidence, methodology and representative visual outputs instead.
+
+---
+
+[← Project README](../README.md) · [Validation strategy](validation.md) · [Status and roadmap](status-and-roadmap.md)
