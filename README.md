@@ -6,7 +6,7 @@
 
 **32.44M total hex cells** · **24.15M active cells** · **97.05M adjacency relationships** · **31,264 final provinces**
 
-[Results gallery](docs/results-and-examples.md) · [Technical evidence](docs/technical-evidence.md) · [QA case study](docs/qa-case-study-holes.md) · [Project role](docs/project-role.md)
+[Results gallery](docs/results-and-examples.md) · [Technical evidence](docs/technical-evidence.md) · [QA case study](docs/qa-case-study-holes.md) · [Practical cases](docs/practical-design-cases.md) · [Project role](docs/project-role.md)
 
 </div>
 
@@ -24,7 +24,7 @@
 - **Weak shapes left after completeness repair** → ran four additional cleanup passes and evaluated merge candidates → **230,178 cell reassignments** and **20 province merges**.
 - **Slow and opaque global experimentation** → separated expensive global preparation from deterministic regional execution, with persisted intermediate outputs, checkpoints and region-level reruns.
 
-These are passed quality gates for the current dataset. Geographic calibration and visual refinement remain ongoing; [the evidence page](docs/technical-evidence.md) records the measurable snapshot and its limits.
+These are passed quality gates for the current dataset. Geographic calibration and visual refinement remain ongoing; [the evidence page](docs/technical-evidence.md) records the measurable snapshot and its limits. Additional [practical design cases](docs/practical-design-cases.md) show how recurring problems were framed, evaluated and translated into system decisions during development.
 
 ---
 
@@ -56,6 +56,7 @@ The central difficulty is global generalisation. A method that works in Iberia m
 | [Results and examples](docs/results-and-examples.md) | Global visual gallery, regional commentary and projection note |
 | [Technical evidence](docs/technical-evidence.md) | Verified global metrics, coverage and post-processing results |
 | [QA case study](docs/qa-case-study-holes.md) | Detection, repair and verification of unassigned spatial holes |
+| [Practical design cases](docs/practical-design-cases.md) | Iteration cases involving rivers, mountains, deserts, coasts, regional reruns and map projection |
 | [Overview](docs/overview.md) | Scope, objectives, constraints and success criteria |
 | [Architecture](docs/architecture.md) | Processing stages, data flow and operational structure |
 | [Design decisions](docs/design-decisions.md) | Major choices, alternatives and trade-offs |
